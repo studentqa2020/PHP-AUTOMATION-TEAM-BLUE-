@@ -9,7 +9,10 @@ public class FinalLogin {
 	
 	static WebDriver driver;
 	public static void main(String[] args) throws Throwable {
-		driver = BaseLogin.getLogin();
+		
+		driver=  BaseLogin.getDriverManager();
+		
+		driver = BaseLogin.getLogin(driver);
 		
 		Thread.sleep(2000);
 		driver.quit();

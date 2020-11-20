@@ -17,7 +17,8 @@ public class ZooplaPageFactory {
 	@FindBy (xpath= "//*[@class='ui-button-primary ui-cookie-accept-all-medium-large']")
 	private WebElement cookie;
 
-	@FindBy (xpath= "//*[@data-ga-label='user account>sign in']")
+	//@FindBy (xpath= "//*[@data-ga-label='user account>sign in']")
+	@FindBy (xpath="(//*[text()='Sign in'])[1]")
 	private WebElement SignIn;
 	
 	@FindBy (xpath= "//*[@id='signin_email']")
