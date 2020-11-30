@@ -1,5 +1,7 @@
 package com.generic;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -15,6 +17,7 @@ public class Baselogin {
 		WebDriver driver = new ChromeDriver();
 		driver.get(BaseConfig.getConfigValue("url"));
 		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		return driver;
 	}
@@ -23,22 +26,14 @@ public class Baselogin {
 	public static WebDriver getLogin(WebDriver driver) throws Throwable{
 		MasterPageFactory pf = new MasterPageFactory(driver);
 		
-		Highlighter.getColor(driver, pf.getLogin());
+		//Highlighter.getColor(driver, pf.getLogin());
 		SeleniumWait.getExplicitWait(driver, pf.getLogin());
-		pf.getLogin().submit();
-		
-		Highlighter.getColor(driver, pf.getEmailAddress().get(0));
-		SeleniumWait.getExplicitWait(driver, pf.getEmailAddress().get(0));
-		pf.getEmailAddress().get(0).click();
+		pf.getLogin().click();
 		
 		
 		Highlighter.getColor(driver, pf.getEmail());
 		pf.getEmail().sendKeys(BaseConfig.getConfigValue("email"));
 		
-		
-		Highlighter.getColor(driver, pf.getEnterPassword().get(1));
-		SeleniumWait.getExplicitWait(driver, pf.getEnterPassword().get(1));
-		pf.getEnterPassword().get(1).click();
 		
 		
 		Highlighter.getColor(driver, pf.getPassword());

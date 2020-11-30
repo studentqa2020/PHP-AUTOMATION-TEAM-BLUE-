@@ -1,5 +1,6 @@
 package com.testexecution;
 
+import org.junit.runners.Parameterized.Parameters;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -17,15 +18,16 @@ public class SmokeTestingWithTestNG {
 	driver = Baselogin.getDriverManage();
 }
 	@Test
-	public void getTest() throws Throwable{
-		
+	@Parameters(name = "browser")
+	public void getTest(String name) throws Throwable{
+		System.out.println(name);
 		driver = Baselogin.getLogin(driver);
 	}
 	
 	@AfterTest
 	public void getClose() throws Throwable{
 		
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		driver.quit();
 	}
 }

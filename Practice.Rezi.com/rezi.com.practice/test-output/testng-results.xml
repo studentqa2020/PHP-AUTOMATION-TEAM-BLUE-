@@ -1,69 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-11-23T01:13:32 EST" name="Suite" finished-at="2020-11-23T01:13:43 EST" duration-ms="10561">
+  <suite started-at="2020-11-27T20:50:43 EST" name="Suite" finished-at="2020-11-27T20:50:50 EST" duration-ms="6882">
     <groups>
     </groups>
-    <test started-at="2020-11-23T01:13:32 EST" name="Test" finished-at="2020-11-23T01:13:43 EST" duration-ms="10561">
-      <class name="com.testexecution.SmokeTestingWithTestNG">
-        <test-method is-config="true" signature="getDriverSetUp()[pri:0, instance:com.testexecution.SmokeTestingWithTestNG@6236eb5f]" started-at="2020-11-23T01:13:32 EST" name="getDriverSetUp" finished-at="2020-11-23T01:13:39 EST" duration-ms="6826" status="PASS">
+    <test started-at="2020-11-27T20:50:43 EST" name="Test" finished-at="2020-11-27T20:50:50 EST" duration-ms="6804">
+      <class name="com.java.condition.practice.ReviewClassPractice">
+        <test-method signature="getsalary(java.lang.String)[pri:0, instance:com.java.condition.practice.ReviewClassPractice@1d8bd0de]" started-at="2020-11-27T20:50:43 EST" name="getsalary" finished-at="2020-11-27T20:50:50 EST" duration-ms="6764" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getDriverSetUp -->
-        <test-method signature="getTest()[pri:0, instance:com.testexecution.SmokeTestingWithTestNG@6236eb5f]" started-at="2020-11-23T01:13:39 EST" name="getTest" finished-at="2020-11-23T01:13:39 EST" duration-ms="82" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        </test-method> <!-- getsalary -->
+      </class> <!-- com.java.condition.practice.ReviewClassPractice -->
+    </test> <!-- Test -->
+    <test started-at="2020-11-27T20:50:50 EST" name="Test2" finished-at="2020-11-27T20:50:50 EST" duration-ms="15">
+      <class name="com.java.condition.practice.ReviewClassPractice">
+        <test-method signature="getsalary(java.lang.String)[pri:0, instance:com.java.condition.practice.ReviewClassPractice@37858383]" started-at="2020-11-27T20:50:50 EST" name="getsalary" finished-at="2020-11-27T20:50:50 EST" duration-ms="12" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ie]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalStateException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='layout-row layout-align-center-center x-C x-k x-l']"}
-  (Session info: chrome=86.0.4240.198)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'FARHAN', ip: '192.168.1.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\maqfy\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53653}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 640cc3f89baa8a9011e2941d87d96eeb
-*** Element info: {Using=xpath, value=//*[@class='layout-row layout-align-center-center x-C x-k x-l']}]]>
+              <![CDATA[The driver executable does not exist: C:\Users\maqfy\git\repository2\BLUE TEAM\Practice.Rezi.com\rezi.com.practice\.\Driver\IEDriverServer.exe]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[@class='layout-row layout-align-center-center x-C x-k x-l']"}
-  (Session info: chrome=86.0.4240.198)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'FARHAN', ip: '192.168.1.168', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 86.0.4240.198, chrome: {chromedriverVersion: 86.0.4240.22 (398b0743353ff..., userDataDir: C:\Users\maqfy\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:53653}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: 640cc3f89baa8a9011e2941d87d96eeb
-*** Element info: {Using=xpath, value=//*[@class='layout-row layout-align-center-center x-C x-k x-l']}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy12.getWrappedElement(Unknown Source)
-at org.openqa.selenium.remote.internal.WebElementToJsonConverter.apply(WebElementToJsonConverter.java:50)
-at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:948)
-at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(ReduceOps.java:913)
-at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
-at java.base/java.util.stream.ReferencePipeline.collect(ReferencePipeline.java:578)
-at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:484)
-at com.util.Highlighter.getColor(Highlighter.java:14)
-at com.generic.Baselogin.getLogin(Baselogin.java:26)
-at com.testexecution.SmokeTestingWithTestNG.getTest(SmokeTestingWithTestNG.java:22)
+              <![CDATA[java.lang.IllegalStateException: The driver executable does not exist: C:\Users\maqfy\git\repository2\BLUE TEAM\Practice.Rezi.com\rezi.com.practice\.\Driver\IEDriverServer.exe
+at com.google.common.base.Preconditions.checkState(Preconditions.java:585)
+at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:146)
+at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:141)
+at org.openqa.selenium.ie.InternetExplorerDriverService.access$000(InternetExplorerDriverService.java:35)
+at org.openqa.selenium.ie.InternetExplorerDriverService$Builder.findDefaultExecutable(InternetExplorerDriverService.java:175)
+at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+at org.openqa.selenium.ie.InternetExplorerDriver.setupService(InternetExplorerDriver.java:281)
+at org.openqa.selenium.ie.InternetExplorerDriver.<init>(InternetExplorerDriver.java:211)
+at org.openqa.selenium.ie.InternetExplorerDriver.<init>(InternetExplorerDriver.java:150)
+at com.java.condition.practice.ReviewClassPractice.getsalary(ReviewClassPractice.java:40)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -94,15 +76,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.IllegalStateException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- getTest -->
-        <test-method is-config="true" signature="getClose()[pri:0, instance:com.testexecution.SmokeTestingWithTestNG@6236eb5f]" started-at="2020-11-23T01:13:39 EST" name="getClose" finished-at="2020-11-23T01:13:43 EST" duration-ms="3626" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getClose -->
-      </class> <!-- com.testexecution.SmokeTestingWithTestNG -->
-    </test> <!-- Test -->
+        </test-method> <!-- getsalary -->
+      </class> <!-- com.java.condition.practice.ReviewClassPractice -->
+    </test> <!-- Test2 -->
   </suite> <!-- Suite -->
 </testng-results>

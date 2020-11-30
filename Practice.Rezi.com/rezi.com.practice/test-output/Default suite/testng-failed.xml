@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testexecution.SmokeTestingWithTestNG">
+      <class name="com.java.condition.practice.ReviewClassPractice">
         <methods>
-          <include name="getTest"/>
-          <include name="getClose"/>
-          <include name="getDriverSetUp"/>
+          <include name="getsalary"/>
         </methods>
-      </class> <!-- com.testexecution.SmokeTestingWithTestNG -->
+      </class> <!-- com.java.condition.practice.ReviewClassPractice -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

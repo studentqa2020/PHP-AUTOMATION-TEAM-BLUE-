@@ -1,7 +1,5 @@
 package com.gentle.object.model;
 
-import java.util.List;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,20 +11,12 @@ public class MasterPageFactory {
 		PageFactory.initElements(diver, this);
 	}
 
-	
-	
-	@FindBy(xpath = "//*[@class='layout-row layout-align-center-center x-C x-k x-l']")
+	@FindBy(xpath = "(//*[text()='LOG IN'])[1]")
 	private WebElement login;
 	
-	@FindBy (xpath = "//*[@class='j-r']")
-	private List<WebElement> EmailAddress;
-	
-	@FindBy(xpath = "//*[@class='j-a j-b']")
+	@FindBy(xpath = "(//*[@type='text'])[1]")
 	private WebElement email;
 	
-	
-	@FindBy (xpath = "//*[@class='j-r']")
-	private List<WebElement> EnterPassword;
 	
 	@FindBy(xpath = "//*[@type='password']")
 	private WebElement password;
@@ -36,20 +26,13 @@ public class MasterPageFactory {
 	
 	
 	
+	
 	public WebElement getLogin() {
 		return login;
 	}
 	
-	public List<WebElement> getEmailAddress() {
-		return EmailAddress;
-	}
-
-	public List<WebElement> getEnterPassword() {
-		return EnterPassword;
-	}
-
 	public WebElement getEmail() {
-		return email;
+	return email;
 	}
 	public WebElement getPassword() {
 		return password;

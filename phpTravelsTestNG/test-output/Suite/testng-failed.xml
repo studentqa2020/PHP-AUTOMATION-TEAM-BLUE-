@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test2(failed)">
+    <parameter name="Browser" value="IE"/>
+    <classes>
+      <class name="com.practice.java.CrossBrowserTesting">
+        <methods>
+          <include name="getMyBrowser" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.practice.java.CrossBrowserTesting -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite] -->
