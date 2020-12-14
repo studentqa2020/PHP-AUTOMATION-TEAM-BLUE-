@@ -15,7 +15,7 @@ public class CrossBrowserTesting {
 		
 		System.out.println(value);
 		
-		if(value.equals("Chrome")) {
+		if(value.equals("Chrome")) {//true
 			//open chrome browser
 			System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 			WebDriver driver = new ChromeDriver();

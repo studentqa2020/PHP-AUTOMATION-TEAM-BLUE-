@@ -1,5 +1,7 @@
 package com.generic;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -17,6 +19,7 @@ public class ZooplaLoginFunction {
 		WebDriver driver = new ChromeDriver();
 		driver.get(Config.getconfig("URL"));
 		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);//check gui loaded
 		
 		ZooplaPageFactory pf = new ZooplaPageFactory(driver);
 		

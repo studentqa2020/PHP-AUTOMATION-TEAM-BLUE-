@@ -15,6 +15,7 @@ public class SmokeTest {
 		
 		Thread.sleep(3000);
 		driver.quit();
+		System.out.println("Run Successfully");
 		
 	}
 }

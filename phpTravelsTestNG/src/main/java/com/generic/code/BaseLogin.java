@@ -1,5 +1,7 @@
 package com.generic.code;
 
+
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -15,7 +17,7 @@ public class BaseLogin {
 		WebDriver driver = new ChromeDriver();
 		driver.get(BoseConfig.getConfigValue("url"));
 		driver.manage().window().maximize();
-
+		System.gc();
 		System.out.println("SETUP COMPLETED");
 		return driver;
 	}
@@ -48,9 +50,16 @@ public class BaseLogin {
 		Highlighter.getColor(driver, pf.getPassword());
 		pf.getPassword().sendKeys(BoseConfig.getConfigValue("password"));
 
-		Highlighter.getColor(driver, pf.getConfirmPassword().get(5));
-		pf.getConfirmPassword().get(5).sendKeys(BoseConfig.getConfigValue("password"));
-
+		
+		 Highlighter.getColor(driver, pf.getConfirmPassword().get(5));
+		 pf.getConfirmPassword().get(5).sendKeys(BoseConfig.getConfigValue("password"));
+		 
+		/*
+		 * List<WebElement> ConfirmPassword = driver.findElements(By.
+		 * xpath("//*[@class='pure-material-textfield-outlined float-none']"));
+		 * ConfirmPassword.get(5).sendKeys("smarttech");
+		 */
+		
 		Highlighter.getColor(driver, pf.getFinalSignUp());
 		SeleniumWait.getExplicitWait(driver, pf.getFinalSignUp());
 		pf.getFinalSignUp().submit();

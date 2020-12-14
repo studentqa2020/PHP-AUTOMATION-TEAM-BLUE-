@@ -61,17 +61,23 @@ public class phpLoginAutomationCodng {
 	}
 
 	
-	@When("Send valid email")
-	public void send_valid_email() throws Throwable {
-		pf.getEmail().sendKeys(BoseConfig.getConfigValue("email"));   
-	    
+	/*
+	 * @When("Send valid email") public void send_valid_email() throws Throwable {
+	 * pf.getEmail().sendKeys(BoseConfig.getConfigValue("email"));
+	 */
+	@When ("Send valid email {string}")
+	public void SendValidEmail(String user) {
+		pf.getEmail().sendKeys(user);
 	}
 	
-	@When("Send valid password")
-	public void send_valid_password() throws Throwable {
-		pf.getPassword().sendKeys(BoseConfig.getConfigValue("password"));    
-	    
+	/*
+	 * @When("Send valid password ") public void send_valid_password() throws
+	 * Throwable { pf.getPassword().sendKeys(BoseConfig.getConfigValue("password"));
+	 */
+	@When("Send valid password {string}")
+	public void SendValidPassword(String password) {
 	}
+	
 	@When("Send valid confirmPassword")
 	public void send_valid_confirmPassword() throws Throwable {
 		pf.getConfirmPassword().get(5).sendKeys(BoseConfig.getConfigValue("password"));   
