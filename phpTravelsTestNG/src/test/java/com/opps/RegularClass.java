@@ -4,28 +4,27 @@ public class RegularClass implements Child {
 
 public static void main(String[] args) {
 	
-	RegularClass obj = new RegularClass();
-	obj.getA(10);
-	obj.getB(20);
-	obj.getC(30);
-	System.out.println("a");
-	System.out.println("b");
-	System.out.println("c");
+	//RegularClass obj = new RegularClass();
+	Child obj = new RegularClass();
+	obj.getA();
+	obj.getB();
+	obj.getC();
+
 }
 
 @Override
-public void getB(int b) {
-	// TODO Auto-generated method stub
+public void getB() {
+	System.out.println("a=100"+(a+b));
 }
 
 @Override
-public void getA(int a) {
-	// TODO Auto-generated method stub
+public void getA() {
+	System.out.println("b=200"+(b*c));
 }
 
 @Override
-public void getC(int c) {
-	// TODO Auto-generated method stub
+public void getC() {
+	System.out.println("c=300"+(c/a));
 }
 }
 

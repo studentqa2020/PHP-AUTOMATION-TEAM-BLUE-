@@ -1,5 +1,6 @@
 package com.opps;
 
 public interface Parent extends GP {
- void getB(int b);
+	public static int b= 20;
+ void getB();
 }

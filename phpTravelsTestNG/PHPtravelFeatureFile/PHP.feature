@@ -13,7 +13,7 @@ As a PhpTravel user , i can signup successfully with valid user name and passwor
 	And Send valid firstname 
 	And Send valid lastname 
 	And Send valid mobilenumber 
-	And Send valid email "<use>"
+	And Send valid email "<user>"
 	And Send valid password "<password>"
 	And Send valid confirmPassword   
 	And Click submit btn 

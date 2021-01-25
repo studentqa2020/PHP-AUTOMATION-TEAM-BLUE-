@@ -27,6 +27,9 @@ public class ArrayCodingTest {
 		System.out.println(Arrays.toString(b));
 		System.out.println(b.length);
 		
+		int SecondMinValue = Arrays.stream(a).filter(w -> w>minValue).min().getAsInt();
+		System.out.println("Arrays 2nd min value="+SecondMinValue);
+		
 		for(int g:b) {
 		System.out.println(g);
 		}

@@ -15,25 +15,22 @@ public class phpLoginAutomationCodng {
 	WebDriver driver;
 	MasterPageFactory pf;
 	
-	@Given("Open the browser")
+	@Given("^Open the browser$")
 	public void open_the_browser() {
 		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();   
-	      
-	    
 	}
 
 	@When("Send URL")
 	public void send_URL() throws Throwable {
 		driver.get(BoseConfig.getConfigValue("url"));  
-	    
 	}
+	
 	@When("Click My Account")
 	public void click_My_Account() {
 		pf = new MasterPageFactory(driver);
 		pf.getMyAccount().click(); 
-	   
 	}
 	
 	@When("Click SignUp btn")
@@ -44,8 +41,6 @@ public class phpLoginAutomationCodng {
 	@When("Send valid firstname")
 	public void send_valid_firstname() throws Throwable {
 		pf.getFirstName().sendKeys(BoseConfig.getConfigValue("firstname"));
- 
-	    
 	}
 
 	@When("Send valid lastname")
@@ -60,11 +55,11 @@ public class phpLoginAutomationCodng {
 	    
 	}
 
-	
 	/*
 	 * @When("Send valid email") public void send_valid_email() throws Throwable {
 	 * pf.getEmail().sendKeys(BoseConfig.getConfigValue("email"));
 	 */
+	
 	@When ("Send valid email {string}")
 	public void SendValidEmail(String user) {
 		pf.getEmail().sendKeys(user);
@@ -74,6 +69,7 @@ public class phpLoginAutomationCodng {
 	 * @When("Send valid password ") public void send_valid_password() throws
 	 * Throwable { pf.getPassword().sendKeys(BoseConfig.getConfigValue("password"));
 	 */
+	
 	@When("Send valid password {string}")
 	public void SendValidPassword(String password) {
 	}
