@@ -1,7 +1,5 @@
 package com.generic.code;
 
-
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -12,17 +10,22 @@ import com.util.SeleniumWait;
 
 public class BaseLogin {
 
-	public static WebDriver getDriverManage() throws Throwable {
-		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+	public static WebDriver getDriverManage()  {
+		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver1.exe");
 		WebDriver driver = new ChromeDriver();
-		driver.get(BoseConfig.getConfigValue("url"));
+		try {
+			driver.get(BoseConfig.getConfigValue("url"));
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.manage().window().maximize();
 		System.gc();
 		System.out.println("SETUP COMPLETED");
 		return driver;
 	}
 
-	public static WebDriver getLogin(WebDriver driver) throws Throwable {
+	public static WebDriver getLogin(WebDriver driver)  {
 		System.out.println("TEST STARTED");
 
 		MasterPageFactory pf = new MasterPageFactory(driver);
@@ -36,23 +39,24 @@ public class BaseLogin {
 		pf.getSignUp().click();
 
 		Highlighter.getColor(driver, pf.getFirstName(), "green");
-		pf.getFirstName().sendKeys(BoseConfig.getConfigValue("firstname"));
+		try {
+			pf.getFirstName().sendKeys(BoseConfig.getConfigValue("firstname"));
+			pf.getLastName().sendKeys(BoseConfig.getConfigValue("lastname"));
+			pf.getMobileNumber().sendKeys(BoseConfig.getConfigValue("mobilenumber"));
+			pf.getEmail().sendKeys(BoseConfig.getConfigValue("email"));
+			pf.getPassword().sendKeys(BoseConfig.getConfigValue("password"));
+			pf.getConfirmPassword().get(5).sendKeys(BoseConfig.getConfigValue("password"));
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		Highlighter.getColor(driver, pf.getLastName());
-		pf.getLastName().sendKeys(BoseConfig.getConfigValue("lastname"));
-
 		Highlighter.getColor(driver, pf.getMobileNumber());
-		pf.getMobileNumber().sendKeys(BoseConfig.getConfigValue("mobilenumber"));
-
 		Highlighter.getColor(driver, pf.getEmail());
-		pf.getEmail().sendKeys(BoseConfig.getConfigValue("email"));
-
 		Highlighter.getColor(driver, pf.getPassword());
-		pf.getPassword().sendKeys(BoseConfig.getConfigValue("password"));
-
-		
-		 Highlighter.getColor(driver, pf.getConfirmPassword().get(5));
-		 pf.getConfirmPassword().get(5).sendKeys(BoseConfig.getConfigValue("password"));
+		Highlighter.getColor(driver, pf.getConfirmPassword().get(5));
+		 
 		 
 		/*
 		 * List<WebElement> ConfirmPassword = driver.findElements(By.

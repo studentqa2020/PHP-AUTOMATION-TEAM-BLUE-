@@ -3,11 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.practice.java.CrossBrowserTesting">
+      <class name="com.runner.phpLoginRunnerFile">
         <methods>
-          <include name="getMyBrowser"/>
+          <include name="setUpClass"/>
+          <include name="runScenario" invocation-numbers="0"/>
+          <include name="setup"/>
+          <include name="tearDownClass"/>
         </methods>
-      </class> <!-- com.practice.java.CrossBrowserTesting -->
+      </class> <!-- com.runner.phpLoginRunnerFile -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,7 +1,6 @@
 package com.util;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 
 public class ExceptionTesting {
 
@@ -13,9 +12,10 @@ public class ExceptionTesting {
 			  FileInputStream fis = new FileInputStream("file");
 			 
 			System.out.println(1/0);
+			System.out.println(fis);
 		} catch (Exception e) {
 			 //TODO Auto-generated catch block
-			e.printStackTrace();
+			//e.printStackTrace();
 			System.out.println("12");
 		}
 		finally{
